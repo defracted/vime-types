@@ -1,270 +1,270 @@
 export interface IAnnihilation {
   global: {
-    kills: bigint;
-    bowkills: bigint;
-    wood: bigint;
-    ores: bigint;
-    nexus: bigint;
-    digged: bigint;
+    kills: number;
+    bowkills: number;
+    wood: number;
+    ores: number;
+    nexus: number;
+    digged: number;
   };
 
   season: {
     monthly: {
-      kills: bigint;
-      bowkills: bigint;
-      wood: bigint;
-      ores: bigint;
-      nexus: bigint;
-      digged: bigint;
+      kills: number;
+      bowkills: number;
+      wood: number;
+      ores: number;
+      nexus: number;
+      digged: number;
     };
   };
 }
 
 export interface IBuildBattle {
   global: {
-    games: bigint;
-    wins: bigint;
+    games: number;
+    wins: number;
   };
 
   season: {
     monthly: {
-      games: bigint;
-      wins: bigint;
+      games: number;
+      wins: number;
     };
   };
 }
 
 export interface IBlockParty {
   global: {
-    games: bigint;
-    wins: bigint;
-    levels: bigint;
+    games: number;
+    wins: number;
+    levels: number;
   };
 
   season: {
     monthly: {
-      games: bigint;
-      wins: bigint;
-      levels: bigint;
+      games: number;
+      wins: number;
+      levels: number;
     };
   };
 }
 
 export interface IBedWars {
   global: {
-    kills: bigint;
-    deaths: bigint;
-    games: bigint;
-    wins: bigint;
-    bedBreaked: bigint;
+    kills: number;
+    deaths: number;
+    games: number;
+    wins: number;
+    bedBreaked: number;
   };
 
   season: {
     monthly: {
-      kills: bigint;
-      deaths: bigint;
-      games: bigint;
-      wins: bigint;
-      bedBreaked: bigint;
+      kills: number;
+      deaths: number;
+      games: number;
+      wins: number;
+      bedBreaked: number;
     };
   };
 }
 
 export interface IClashPoint {
   global: {
-    kills: bigint;
-    deaths: bigint;
-    games: bigint;
-    wins: bigint;
-    resourcePointsBreaked: bigint;
+    kills: number;
+    deaths: number;
+    games: number;
+    wins: number;
+    resourcePointsBreaked: number;
   };
 
   season: {
     monthly: {
-      kills: bigint;
-      deaths: bigint;
-      games: bigint;
-      wins: bigint;
-      resourcePointsBreaked: bigint;
+      kills: number;
+      deaths: number;
+      games: number;
+      wins: number;
+      resourcePointsBreaked: number;
     };
   };
 }
 
 export interface IDeathRun {
   global: {
-    games: bigint;
-    wins: bigint;
+    games: number;
+    wins: number;
   };
 
   season: {
     monthly: {
-      games: bigint;
-      wins: bigint;
+      games: number;
+      wins: number;
     };
   };
 }
 
 export interface IDuels {
   global: {
-    solo_wins: bigint;
-    solo_games: bigint;
-    team_wins: bigint;
-    team_games: bigint;
-    ranked_games: bigint;
-    ranked_wins: bigint;
-    total_wins: bigint;
-    total_games: bigint;
-    wins_classic: bigint;
-    wins_bow: bigint;
-    wins_op: bigint;
-    wins_potion: bigint;
-    wins_uhc: bigint;
-    wins_bwh: bigint;
-    maxstrike: bigint;
+    solo_wins: number;
+    solo_games: number;
+    team_wins: number;
+    team_games: number;
+    ranked_games: number;
+    ranked_wins: number;
+    total_wins: number;
+    total_games: number;
+    wins_classic: number;
+    wins_bow: number;
+    wins_op: number;
+    wins_potion: number;
+    wins_uhc: number;
+    wins_bwh: number;
+    maxstrike: number;
   };
 
   season: {
     monthly: {
-      solo_wins: bigint;
-      solo_games: bigint;
-      team_wins: bigint;
-      team_games: bigint;
-      ranked_games: bigint;
-      ranked_wins: bigint;
-      total_wins: bigint;
-      total_games: bigint;
-      wins_classic: bigint;
-      wins_bow: bigint;
-      wins_op: bigint;
-      wins_potion: bigint;
-      wins_uhc: bigint;
-      wins_bwh: bigint;
-      rate: bigint;
-      max_rate: bigint;
+      solo_wins: number;
+      solo_games: number;
+      team_wins: number;
+      team_games: number;
+      ranked_games: number;
+      ranked_wins: number;
+      total_wins: number;
+      total_games: number;
+      wins_classic: number;
+      wins_bow: number;
+      wins_op: number;
+      wins_potion: number;
+      wins_uhc: number;
+      wins_bwh: number;
+      rate: number;
+      max_rate: number;
     };
   };
 }
 
 export interface IGunGame {
   global: {
-    kills: bigint;
-    wins: bigint;
-    games: bigint;
-    levels: bigint;
+    kills: number;
+    wins: number;
+    games: number;
+    levels: number;
   };
 
   season: {
     monthly: {
-      kills: bigint;
-      wins: bigint;
-      games: bigint;
-      levels: bigint;
+      kills: number;
+      wins: number;
+      games: number;
+      levels: number;
     };
   };
 }
 
 export interface IHungerGames {
   global: {
-    kills: bigint;
-    wins: bigint;
-    games: bigint;
+    kills: number;
+    wins: number;
+    games: number;
   };
 
   season: {
     monthly: {
-      kills: bigint;
-      wins: bigint;
-      games: bigint;
+      kills: number;
+      wins: number;
+      games: number;
     };
   };
 }
 
 export interface IKitPvp {
   global: {
-    kills: bigint;
-    deaths: bigint;
-    points: bigint;
+    kills: number;
+    deaths: number;
+    points: number;
   };
 
   season: {
     monthly: {
-      kills: bigint;
-      deaths: bigint;
+      kills: number;
+      deaths: number;
     };
   };
 }
 
 export interface IMobWars {
   global: {
-    games: bigint;
-    wins: bigint;
-    mobsKilled: bigint;
-    mobsSended: bigint;
-    maxIncome: bigint;
+    games: number;
+    wins: number;
+    mobsKilled: number;
+    mobsSended: number;
+    maxIncome: number;
   };
   season: {
     monthly: {
-      games: bigint;
-      wins: bigint;
-      mobsKilled: bigint;
-      mobsSended: bigint;
+      games: number;
+      wins: number;
+      mobsKilled: number;
+      mobsSended: number;
     };
   };
 }
 
 export interface IPrison {
   global: {
-    total_blocks: bigint;
-    earned_money: bigint;
-    kills: bigint;
-    deaths: bigint;
-    mobs: bigint;
+    total_blocks: number;
+    earned_money: number;
+    kills: number;
+    deaths: number;
+    mobs: number;
     blocks: {
-      "1": bigint;
-      "3": bigint;
-      "12": bigint;
-      "13": bigint;
-      "14": bigint;
-      "15": bigint;
-      "16": bigint;
-      "17": bigint;
-      "22": bigint;
-      "3bigint": bigint;
-      "41": bigint;
-      "42": bigint;
-      "56": bigint;
-      "57": bigint;
-      "1bigint3": bigint;
-      "133": bigint;
-      "155": bigint;
-      "172": bigint;
-      "159:14": bigint;
-      "159:5": bigint;
-      "155:2": bigint;
-      "35:13": bigint;
-      "155:1": bigint;
-      "159:1": bigint;
-      "12:1": bigint;
+      "1": number;
+      "3": number;
+      "12": number;
+      "13": number;
+      "14": number;
+      "15": number;
+      "16": number;
+      "17": number;
+      "22": number;
+      "3number": number;
+      "41": number;
+      "42": number;
+      "56": number;
+      "57": number;
+      "1number3": number;
+      "133": number;
+      "155": number;
+      "172": number;
+      "159:14": number;
+      "159:5": number;
+      "155:2": number;
+      "35:13": number;
+      "155:1": number;
+      "159:1": number;
+      "12:1": number;
     };
   };
   season: {
     manual: {
-      total_blocks: bigint;
-      earned_money: bigint;
-      kills: bigint;
-      deaths: bigint;
-      mobs: bigint;
+      total_blocks: number;
+      earned_money: number;
+      kills: number;
+      deaths: number;
+      mobs: number;
       blocks: {
-        "1": bigint;
-        "3": bigint;
-        "12": bigint;
-        "13": bigint;
-        "14": bigint;
-        "15": bigint;
-        "16": bigint;
-        "56": bigint;
-        "155:2": bigint;
-        "155:1": bigint;
+        "1": number;
+        "3": number;
+        "12": number;
+        "13": number;
+        "14": number;
+        "15": number;
+        "16": number;
+        "56": number;
+        "155:2": number;
+        "155:1": number;
       };
     };
   };
@@ -272,138 +272,138 @@ export interface IPrison {
 
 export interface ISkyWars {
   global: {
-    wins: bigint;
-    games: bigint;
-    kills: bigint;
-    deaths: bigint;
-    arrowsFired: bigint;
-    blocksBroken: bigint;
-    blocksPlaced: bigint;
-    currentWinStreak: bigint;
-    winStreak: bigint;
+    wins: number;
+    games: number;
+    kills: number;
+    deaths: number;
+    arrowsFired: number;
+    blocksBroken: number;
+    blocksPlaced: number;
+    currentWinStreak: number;
+    winStreak: number;
   };
 
   season: {
     monthly: {
-      wins: bigint;
-      games: bigint;
-      kills: bigint;
-      deaths: bigint;
-      arrowsFired: bigint;
-      blocksBroken: bigint;
-      blocksPlaced: bigint;
+      wins: number;
+      games: number;
+      kills: number;
+      deaths: number;
+      arrowsFired: number;
+      blocksBroken: number;
+      blocksPlaced: number;
     };
   };
 }
 
 export interface IArcade {
   global: {
-    games: bigint;
-    wins: bigint;
-    kills: bigint;
-    deaths: bigint;
+    games: number;
+    wins: number;
+    kills: number;
+    deaths: number;
   };
 
   season: {
     monthly: {
-      games: bigint;
-      wins: bigint;
-      kills: bigint;
-      deaths: bigint;
+      games: number;
+      wins: number;
+      kills: number;
+      deaths: number;
     };
   };
 }
 
 export interface IBridge {
   global: {
-    games: bigint;
-    wins: bigint;
-    kills: bigint;
-    deaths: bigint;
-    points: bigint;
+    games: number;
+    wins: number;
+    kills: number;
+    deaths: number;
+    points: number;
   };
 }
 
 export interface IJumpLeague {
   global: {
-    games: bigint;
-    wins: bigint;
-    kills: bigint;
-    deaths: bigint;
-    checkpoints: bigint;
+    games: number;
+    wins: number;
+    kills: number;
+    deaths: number;
+    checkpoints: number;
   };
 }
 
 export interface IMurder {
   global: {
-    games: bigint;
-    total_wins: bigint;
-    wins_as_innocent: bigint;
-    wins_as_maniac: bigint;
-    wins_as_detective: bigint;
-    kills: bigint;
+    games: number;
+    total_wins: number;
+    wins_as_innocent: number;
+    wins_as_maniac: number;
+    wins_as_detective: number;
+    kills: number;
   };
 }
 
 export interface IPaintball {
   global: {
-    games: bigint;
-    wins: bigint;
-    kills: bigint;
-    deaths: bigint;
+    games: number;
+    wins: number;
+    kills: number;
+    deaths: number;
   };
 }
 
 export interface ISheep {
   global: {
-    games: bigint;
-    wins: bigint;
-    kills: bigint;
-    deaths: bigint;
+    games: number;
+    wins: number;
+    kills: number;
+    deaths: number;
   };
 }
 
 export interface ITurfWars {
   global: {
-    games: bigint;
-    wins: bigint;
-    kills: bigint;
-    deaths: bigint;
+    games: number;
+    wins: number;
+    kills: number;
+    deaths: number;
   };
 }
 
 export interface ISpleef {
   global: {
-    games: bigint;
-    wins: bigint;
-    kills: bigint;
-    deaths: bigint;
-    broken_blocks: bigint;
+    games: number;
+    wins: number;
+    kills: number;
+    deaths: number;
+    broken_blocks: number;
   };
 }
 
 export interface ITntTag {
   global: {
-    games: bigint;
-    wins: bigint;
-    kills: bigint;
+    games: number;
+    wins: number;
+    kills: number;
   };
 }
 export interface ITntRun {
   global: {
-    games: bigint;
-    wins: bigint;
-    broken_blocks: bigint;
+    games: number;
+    wins: number;
+    broken_blocks: number;
   };
 }
 
 export interface ILuckyWars {
   global: {
-    games: bigint;
-    wins: bigint;
-    kills: bigint;
-    deaths: bigint;
-    lucky_blocks: bigint;
+    games: number;
+    wins: number;
+    kills: number;
+    deaths: number;
+    lucky_blocks: number;
   };
 }
 
