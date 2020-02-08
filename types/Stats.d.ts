@@ -1,6 +1,10 @@
-/*************************
- * Типы для Annihilation *
- *************************/
+/****************************************
+ ****         MIT License            ****
+ ****                                ****
+ **** Copyright (c) 2020 runic-tears ****
+ ****************************************/
+
+// Annihilation
 
 export interface IAnnihilation {
   global: IAnnihilationGlobal;
@@ -27,9 +31,7 @@ export interface IAnnihilationSeason {
   };
 }
 
-/************************
- * Типы для BuildBattle *
- ************************/
+// Build Battle
 
 export interface IBuildBattle {
   global: IBuildBattleGlobal;
@@ -48,9 +50,7 @@ export interface IBuildBattleSeason {
   };
 }
 
-/************************
- * Типы для Block Party *
- ************************/
+// Block Party
 
 export interface IBlockParty {
   global: IBlockPartyGlobal;
@@ -71,9 +71,7 @@ export interface IBlockPartySeason {
   };
 }
 
-/*********************
- * Типы для Bed Wars *
- *********************/
+// Bed Wars
 
 export interface IBedWars {
   global: IBedWarsGlobal;
@@ -98,9 +96,7 @@ export interface IBedWarsSeason {
   };
 }
 
-/************************
- * Типы для Clash Point *
- ************************/
+// Clash Point
 
 export interface IClashPoint {
   global: IClashPointGlobal;
@@ -125,9 +121,7 @@ export interface IClashPointSeason {
   };
 }
 
-/**********************
- * Типы для Death Run *
- **********************/
+// Death Run
 
 export interface IDeathRun {
   global: IDeathRunGlobal;
@@ -146,9 +140,7 @@ export interface IDeathRunSeason {
   };
 }
 
-/*******************
- * Типы для Дуэлей *
- *******************/
+// Duels
 
 export interface IDuels {
   global: IDuelsGlobal;
@@ -194,9 +186,7 @@ export interface IDuelsSeason {
   };
 }
 
-/*********************
- * Типы для Gun Game *
- *********************/
+// Gun Game
 
 export interface IGunGame {
   global: IGunGameGlobal;
@@ -219,9 +209,7 @@ export interface IGunGameSeason {
   };
 }
 
-/*************************
- * Типы для Hunger Games *
- *************************/
+// Hunger Games
 
 export interface IHungerGames {
   global: IHungerGamesGlobal;
@@ -242,9 +230,7 @@ export interface IHungerGamesSeason {
   };
 }
 
-/********************
- * Типы для Kit PVP *
- ********************/
+// KitPVP
 
 export interface IKitPvp {
   global: IKitPvpGlobal;
@@ -264,9 +250,7 @@ export interface IKitPvpSeason {
   };
 }
 
-/*********************
- * Типы для Mob Wars *
- *********************/
+// Mob Wars
 
 export interface IMobWars {
   global: IMobWarsGlobal;
@@ -290,9 +274,7 @@ export interface IMobWarsSeason {
   };
 }
 
-/********************
- * Типы для Призона *
- ********************/
+// Prison
 
 export interface IPrison {
   global: IPrisonGlobal;
@@ -356,9 +338,7 @@ export interface IPrisonSeason {
   };
 }
 
-/*********************
- * Типы для Sky Wars *
- *********************/
+// Sky Wars
 
 export interface ISkyWars {
   global: ISkyWarsGlobal;
@@ -389,9 +369,7 @@ export interface ISkyWarsSeason {
   };
 }
 
-/******************
- * Типы для Аркад *
- ******************/
+// Arcade
 
 export interface IArcade {
   global: IArcadeGlobal;
@@ -414,9 +392,7 @@ export interface IArcadeSeason {
   };
 }
 
-/********************
- * Типы для Мостов *
- ********************/
+// The Bridge
 
 export interface IBridge {
   global: IBridgeGlobal;
@@ -430,9 +406,7 @@ export interface IBridgeGlobal {
   points: number;
 }
 
-/************************
- * Типы для Jump League *
- ************************/
+// Jump League
 
 export interface IJumpLeague {
   global: IJumpLeagueGlobal;
@@ -446,9 +420,7 @@ export interface IJumpLeagueGlobal {
   checkpoints: number;
 }
 
-/***************************
- * Типы для Murder Mystery *
- ***************************/
+// Murder Mystery
 
 export interface IMurder {
   global: IMurderGlobal;
@@ -463,9 +435,7 @@ export interface IMurderGlobal {
   kills: number;
 }
 
-/**********************
- * Типы для Пеинтбола *
- **********************/
+// Paintball
 
 export interface IPaintball {
   global: IPaintballGlobal;
@@ -478,9 +448,7 @@ export interface IPaintballGlobal {
   deaths: number;
 }
 
-/***********************
- * Типы для Sheep Wars *
- ***********************/
+// Sheep Wars
 
 export interface ISheep {
   global: ISheepGlobal;
@@ -493,9 +461,7 @@ export interface ISheepGlobal {
   deaths: number;
 }
 
-/**********************
- * Типы для Turf Wars *
- **********************/
+// Turf Wars
 
 export interface ITurfWars {
   global: ITurfWarsGlobal;
@@ -508,9 +474,7 @@ export interface ITurfWarsGlobal {
   deaths: number;
 }
 
-/*******************
- * Типы для Сплифа *
- *******************/
+// Spleef
 
 export interface ISpleef {
   global: ISpleefGlobal;
@@ -524,9 +488,7 @@ export interface ISpleefGlobal {
   broken_blocks: number;
 }
 
-/*********************
- * Типы для ТНТ Тега *
- *********************/
+// TNT TAG
 
 export interface ITntTag {
   global: ITntTag;
@@ -538,9 +500,7 @@ export interface ITntTag {
   kills: number;
 }
 
-/*********************
- * Типы для ТНТ Рана *
- *********************/
+// TNT RUN
 
 export interface ITntRun {
   global: ITntRunGlobal;
@@ -552,9 +512,7 @@ export interface ITntRunGlobal {
   broken_blocks: number;
 }
 
-/***********************
- * Типы для Lucky Wars *
- ***********************/
+// Lucky Wars
 
 export interface ILuckyWars {
   global: ILuckyWarsGlobal;
