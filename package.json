@@ -1,0 +1,24 @@
+{
+  "name": "vime-types",
+  "version": "0.0.1",
+  "description": "Библиотека типов данных из VimeWorld API",
+  "main": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/runic-tears/vime-types.git"
+  },
+  "keywords": [
+    "vimeworld",
+    "types",
+    "typescript"
+  ],
+  "author": "runic-tears",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/runic-tears/vime-types/issues"
+  },
+  "homepage": "https://github.com/runic-tears/vime-types#readme"
+}
