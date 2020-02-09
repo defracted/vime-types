@@ -26,6 +26,7 @@ export interface IUser {
   levelPercentage: number;
   rank: UserRank;
   playedSeconds: number;
+  lastSeen: number;
   guild: IUserGuild | null;
 }
 
