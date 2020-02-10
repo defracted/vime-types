@@ -45,8 +45,7 @@ export interface IUserSession {
   game?: string;
 }
 
-export interface IUserSessionRaw {
-  user: IUser;
+export interface IUserSessionRaw extends IUser {
   online: IUserSession;
 }
 
