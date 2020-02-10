@@ -1,6 +1,6 @@
 {
   "name": "vime-types",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Библиотека типов данных из VimeWorld API",
   "main": "index.d.ts",
   "scripts": {
@@ -14,6 +14,11 @@
     "vimeworld",
     "types",
     "typescript"
+  ],
+  "files": [
+    "models/*",
+    "LICENSE",
+    "README.md"
   ],
   "author": "runic-tears",
   "license": "MIT",
