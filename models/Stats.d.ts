@@ -491,10 +491,10 @@ export interface ISpleefGlobal {
 // TNT TAG
 
 export interface ITntTag {
-  global: ITntTag;
+  global: ITntTagGlobal;
 }
 
-export interface ITntTag {
+export interface ITntTagGlobal {
   games: number;
   wins: number;
   kills: number;
