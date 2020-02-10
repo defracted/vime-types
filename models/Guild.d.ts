@@ -58,4 +58,5 @@ export interface IGuildFull extends IUserGuild {
   created: number;
   web_info: string | null;
   perks: IGuildPerks;
+  members: IGuildMember[];
 }
