@@ -111,7 +111,17 @@ export interface IUserStatsRaw {
   stats: IUserStatsGroup;
 }
 
-// TODO: Achievements
+// Achievements
+
+export interface IUserAchievement {
+  id: number;
+  time: number;
+}
+
+export interface IUserAchievements {
+  user: IUser;
+  achievements: IUserAchievement[];
+}
 
 // Leaderboards
 

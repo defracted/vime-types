@@ -1,6 +1,6 @@
 {
   "name": "vime-types",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Библиотека типов данных из VimeWorld API",
   "main": "index.d.ts",
   "scripts": {
