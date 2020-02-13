@@ -4,553 +4,651 @@
  **** Copyright (c) 2020 runic-tears ****
  ****************************************/
 
-// Annihilation
+declare namespace Stats {
+  /** Статистика по Annihilation */
+  export interface IAnnihilation {
+    /** Полная статистика */
+    global: IAnnihilationGlobal;
+    /** Статистика за текущий сезон */
+    season: IAnnihilationSeason;
+  }
 
-export interface IAnnihilation {
-  global: IAnnihilationGlobal;
-  season: IAnnihilationSeason;
-}
-
-export interface IAnnihilationGlobal {
-  kills: number;
-  bowkills: number;
-  wood: number;
-  ores: number;
-  nexus: number;
-  digged: number;
-}
-
-export interface IAnnihilationSeason {
-  monthly: {
+  /** Полная статистика по Annihilation */
+  export interface IAnnihilationGlobal {
+    /** Количество убийств */
     kills: number;
+    /** Количество убийств (с помощью лука) */
     bowkills: number;
+    /** Срублено дерева */
     wood: number;
+    /** Добыто руды */
     ores: number;
+    /** Ударов по базам */
     nexus: number;
+    /** Добыто грязи */
     digged: number;
-  };
-}
+  }
 
-// Build Battle
+  /** Сезонная статистика по Annihilation */
+  export interface IAnnihilationSeason {
+    /** Статистика за текущий месяц */
+    monthly: IAnnihilationGlobal;
+  }
 
-export interface IBuildBattle {
-  global: IBuildBattleGlobal;
-  season: IBuildBattleSeason;
-}
+  /** Статистика по BuildBattle */
+  export interface IBuildBattle {
+    /** Полная статистика */
+    global: IBuildBattleGlobal;
+    /** Статистика за текущий сезон */
+    season: IBuildBattleSeason;
+  }
 
-export interface IBuildBattleGlobal {
-  games: number;
-  wins: number;
-}
-
-export interface IBuildBattleSeason {
-  monthly: {
+  /** Полная статистика по BuildBattle */
+  export interface IBuildBattleGlobal {
+    /** Игр сыграно */
     games: number;
+    /** Побед */
     wins: number;
-  };
-}
+  }
 
-// Block Party
+  /** Сезонная статистика по BuildBattle */
+  export interface IBuildBattleSeason {
+    /** Статистика за текущий месяц */
+    monthly: IBuildBattleGlobal;
+  }
 
-export interface IBlockParty {
-  global: IBlockPartyGlobal;
-  season: IBlockPartySeason;
-}
+  /** Статистика по BlockParty */
+  export interface IBlockParty {
+    /** Полная статистика */
+    global: IBlockPartyGlobal;
+    /** Статистика за текущий сезон */
+    season: IBlockPartySeason;
+  }
 
-export interface IBlockPartyGlobal {
-  games: number;
-  wins: number;
-  levels: number;
-}
-
-export interface IBlockPartySeason {
-  monthly: {
+  /** Полная статистика по BlockParty */
+  export interface IBlockPartyGlobal {
+    /** Количество игр */
     games: number;
+    /** Количество побед */
     wins: number;
+    /** Набрано уровней */
     levels: number;
-  };
-}
+  }
 
-// Bed Wars
+  /** Сезонная статистика по BlockParty */
+  export interface IBlockPartySeason {
+    /** Статистика за текущий месяц */
+    monthly: IBlockPartyGlobal;
+  }
 
-export interface IBedWars {
-  global: IBedWarsGlobal;
-  season: IBedWarsSeason;
-}
+  /** Статистика по BedWars */
+  export interface IBedWars {
+    /** Полная статистика */
+    global: IBedWarsGlobal;
+    /** Сезонная статистика */
+    season: IBedWarsSeason;
+  }
 
-export interface IBedWarsGlobal {
-  kills: number;
-  deaths: number;
-  games: number;
-  wins: number;
-  bedBreaked: number;
-}
-
-export interface IBedWarsSeason {
-  monthly: {
+  /** Полная статистика по BedWars */
+  export interface IBedWarsGlobal {
+    /** Убийств */
     kills: number;
+    /** Смертей */
     deaths: number;
+    /** Количество игр */
     games: number;
+    /** Побед */
     wins: number;
+    /** Сломанных кроватей */
     bedBreaked: number;
-  };
-}
+  }
 
-// Clash Point
+  /** Сезонная статистика по BedWars */
+  export interface IBedWarsSeason {
+    /** Статистика за текущий месяц */
+    monthly: IBedWarsGlobal;
+  }
 
-export interface IClashPoint {
-  global: IClashPointGlobal;
-  season: IClashPointSeason;
-}
+  /** Статистика по ClashPoint */
+  export interface IClashPoint {
+    /** Полная статистика */
+    global: IClashPointGlobal;
+    /** Сезонная статистика */
+    season: IClashPointSeason;
+  }
 
-export interface IClashPointGlobal {
-  kills: number;
-  deaths: number;
-  games: number;
-  wins: number;
-  resourcePointsBreaked: number;
-}
-
-export interface IClashPointSeason {
-  monthly: {
+  /** Полная статистика по ClashPoint */
+  export interface IClashPointGlobal {
+    /** Убийств */
     kills: number;
+    /** Смертей */
     deaths: number;
+    /** Количество игр */
     games: number;
+    /** Побед */
     wins: number;
+    /** Сломано ресурсных точек */
     resourcePointsBreaked: number;
-  };
-}
+  }
 
-// Death Run
+  /** Сезонная статистика по ClashPoint */
+  export interface IClashPointSeason {
+    /** Статистика за текущий месяц */
+    monthly: IClashPointGlobal;
+  }
 
-export interface IDeathRun {
-  global: IDeathRunGlobal;
-  season: IDeathRunSeason;
-}
+  /** Статистика по DeathRun */
+  export interface IDeathRun {
+    /** Полная статистика */
+    global: IDeathRunGlobal;
+    /** Сезонная статистика */
+    season: IDeathRunSeason;
+  }
 
-export interface IDeathRunGlobal {
-  games: number;
-  wins: number;
-}
-
-export interface IDeathRunSeason {
-  monthly: {
+  /** Полная статистика по DeathRun */
+  export interface IDeathRunGlobal {
+    /** Игр сыграно */
     games: number;
+    /** Побед */
     wins: number;
-  };
-}
+  }
 
-// Duels
+  /** Сезонная статистика */
+  export interface IDeathRunSeason {
+    /** Статистика за текущий месяц */
+    monthly: IDeathRunGlobal;
+  }
 
-export interface IDuels {
-  global: IDuelsGlobal;
-  season: IDuelsSeason;
-}
+  /** Статистика для Duels */
+  export interface IDuels {
+    /** Полная статистика */
+    global: IDuelsGlobal;
+    /** Сезонная статистика */
+    season: IDuelsSeason;
+  }
 
-export interface IDuelsGlobal {
-  solo_wins: number;
-  solo_games: number;
-  team_wins: number;
-  team_games: number;
-  ranked_games: number;
-  ranked_wins: number;
-  total_wins: number;
-  total_games: number;
-  wins_classic: number;
-  wins_bow: number;
-  wins_op: number;
-  wins_potion: number;
-  wins_uhc: number;
-  wins_bwh: number;
-  maxstrike: number;
-}
-
-export interface IDuelsSeason {
-  monthly: {
+  /** Полная статистика для Duels */
+  export interface IDuelsGlobal {
+    /** Одиночных побед */
     solo_wins: number;
+    /** Одиночных игр */
     solo_games: number;
+    /** Командных побед */
     team_wins: number;
+    /** Командных игр */
     team_games: number;
+    /** Рейтинговых игр */
     ranked_games: number;
+    /** Рейтинговых побед */
     ranked_wins: number;
+    /** Общее количество побед */
     total_wins: number;
+    /** Общее количество игр */
     total_games: number;
+    /** Побед в Classic */
     wins_classic: number;
+    /** Побед в Bow */
     wins_bow: number;
+    /** Побед в OP */
     wins_op: number;
+    /** Побед в Potion */
     wins_potion: number;
+    /** Побед в UHC */
     wins_uhc: number;
+    /** Побед в BedWars Hard */
     wins_bwh: number;
-    rate: number;
-    max_rate: number;
-  };
-}
+    /** Максимально длинная серия побед */
+    maxstrike: number;
+  }
 
-// Gun Game
-
-export interface IGunGame {
-  global: IGunGameGlobal;
-  season: IGunGameSeason;
-}
-
-export interface IGunGameGlobal {
-  kills: number;
-  wins: number;
-  games: number;
-  levels: number;
-}
-
-export interface IGunGameSeason {
-  monthly: {
-    kills: number;
-    wins: number;
-    games: number;
-    levels: number;
-  };
-}
-
-// Hunger Games
-
-export interface IHungerGames {
-  global: IHungerGamesGlobal;
-  season: IHungerGamesSeason;
-}
-
-export interface IHungerGamesGlobal {
-  kills: number;
-  wins: number;
-  games: number;
-}
-
-export interface IHungerGamesSeason {
-  monthly: {
-    kills: number;
-    wins: number;
-    games: number;
-  };
-}
-
-// KitPVP
-
-export interface IKitPvp {
-  global: IKitPvpGlobal;
-  season: IKitPvpSeason;
-}
-
-export interface IKitPvpGlobal {
-  kills: number;
-  deaths: number;
-  points: number;
-}
-
-export interface IKitPvpSeason {
-  monthly: {
-    kills: number;
-    deaths: number;
-  };
-}
-
-// Mob Wars
-
-export interface IMobWars {
-  global: IMobWarsGlobal;
-  season: IMobWarsSeason;
-}
-
-export interface IMobWarsGlobal {
-  games: number;
-  wins: number;
-  mobsKilled: number;
-  mobsSended: number;
-  maxIncome: number;
-}
-
-export interface IMobWarsSeason {
-  monthly: {
-    games: number;
-    wins: number;
-    mobsKilled: number;
-    mobsSended: number;
-  };
-}
-
-// Prison
-
-export interface IPrison {
-  global: IPrisonGlobal;
-  season: IPrisonSeason;
-}
-
-export interface IPrisonGlobal {
-  total_blocks: number;
-  earned_money: number;
-  kills: number;
-  deaths: number;
-  mobs: number;
-  blocks: {
-    "1": number;
-    "3": number;
-    "12": number;
-    "13": number;
-    "14": number;
-    "15": number;
-    "16": number;
-    "17": number;
-    "22": number;
-    "3number": number;
-    "41": number;
-    "42": number;
-    "56": number;
-    "57": number;
-    "1number3": number;
-    "133": number;
-    "155": number;
-    "172": number;
-    "159:14": number;
-    "159:5": number;
-    "155:2": number;
-    "35:13": number;
-    "155:1": number;
-    "159:1": number;
-    "12:1": number;
-  };
-}
-
-export interface IPrisonSeason {
-  manual: {
-    total_blocks: number;
-    earned_money: number;
-    kills: number;
-    deaths: number;
-    mobs: number;
-    blocks: {
-      "1": number;
-      "3": number;
-      "12": number;
-      "13": number;
-      "14": number;
-      "15": number;
-      "16": number;
-      "56": number;
-      "155:2": number;
-      "155:1": number;
+  /** Сезонная статистика для Duels */
+  export interface IDuelsSeason {
+    /** Статистика за текущий месяц */
+    monthly: Omit<IDuelsGlobal, "maxstrike"> & {
+      /** Текущий рейтинг */
+      rate: number;
+      /** Максимальный рейтинг */
+      max_rate: number;
     };
-  };
-}
+  }
 
-// Sky Wars
+  /** Статистика для GunGame */
+  export interface IGunGame {
+    /** Полная статистика */
+    global: IGunGameGlobal;
+    /** Сезонная статистика */
+    season: IGunGameSeason;
+  }
 
-export interface ISkyWars {
-  global: ISkyWarsGlobal;
-  season: ISkyWarsSeason;
-}
-
-export interface ISkyWarsGlobal {
-  wins: number;
-  games: number;
-  kills: number;
-  deaths: number;
-  arrowsFired: number;
-  blocksBroken: number;
-  blocksPlaced: number;
-  currentWinStreak: number;
-  winStreak: number;
-}
-
-export interface ISkyWarsSeason {
-  monthly: {
-    wins: number;
-    games: number;
+  /** Полная статистика для GunGame */
+  export interface IGunGameGlobal {
+    /** Убийств */
     kills: number;
+    /** Побед */
+    wins: number;
+    /** Игр сыграно */
+    games: number;
+    /** Уровней набрано */
+    levels: number;
+  }
+
+  /** Сезонная статистика для GunGame */
+  export interface IGunGameSeason {
+    /** Статистика за текущий месяц */
+    monthly: IGunGameGlobal;
+  }
+
+  /** Статистика для HungerGames */
+  export interface IHungerGames {
+    /** Полная статистика */
+    global: IHungerGamesGlobal;
+    /** Сезонная статистика */
+    season: IHungerGamesSeason;
+  }
+
+  /** Полная статистика для HungerGames */
+  export interface IHungerGamesGlobal {
+    /** Убийств */
+    kills: number;
+    /** Побед */
+    wins: number;
+    /** Игр сыграно */
+    games: number;
+  }
+
+  /** Сезонная статистика для HungerGame */
+  export interface IHungerGamesSeason {
+    /** Статистика за текущий месяц */
+    monthly: IHungerGamesGlobal;
+  }
+
+  /** Статистика для KitPVP */
+  export interface IKitPvp {
+    /** Полная статистика */
+    global: IKitPvpGlobal;
+    /** Сезонная статистика */
+    season: IKitPvpSeason;
+  }
+
+  /** Полная статистика для KitPVP */
+  export interface IKitPvpGlobal {
+    /** Убийств */
+    kills: number;
+    /** Смертей */
     deaths: number;
+    /** Набрано очков */
+    points: number;
+  }
+
+  /** Сезонная статистика для KitPVP */
+  export interface IKitPvpSeason {
+    /** Статистика за текущий месяц */
+    monthly: Omit<IKitPvpGlobal, "points">;
+  }
+
+  /** Статистика для MobWars */
+  export interface IMobWars {
+    /** Полная статистика */
+    global: IMobWarsGlobal;
+    /** Сезонная статистика */
+    season: IMobWarsSeason;
+  }
+
+  /** Полная статистика для MobWars */
+  export interface IMobWarsGlobal {
+    /** Игр сыграно */
+    games: number;
+    /** Побед */
+    wins: number;
+    /** Мобов убито */
+    mobsKilled: number;
+    /** Мобов отправлено */
+    mobsSended: number;
+    /** Максимальный доход */
+    maxIncome: number;
+  }
+
+  /** Сезонная статистика для MobWars */
+  export interface IMobWarsSeason {
+    /** Статистика за текущий месяц */
+    monthly: Omit<IMobWarsGlobal, "maxIncome">;
+  }
+
+  /** Возможные блоки для Prison */
+  type blocks = any;
+
+  /** Статистика для Prison */
+  export interface IPrison {
+    /** Полная статистика */
+    global: IPrisonGlobal;
+    /** Сезонная статистика */
+    season: IPrisonSeason;
+  }
+
+  /** Полная статистика для Prison */
+  export interface IPrisonGlobal {
+    /** Всего блоков */
+    total_blocks: number;
+    /** Заработано денег */
+    earned_money: number;
+    /** Убийств */
+    kills: number;
+    /** Смертей */
+    deaths: number;
+    /** Убито мобов */
+    mobs: number;
+    /** Блоки */
+    blocks: blocks;
+  }
+
+  /** Сезонная статистика для Prison */
+  export interface IPrisonSeason {
+    manual: IPrisonGlobal;
+  }
+
+  /** Статистика по SkyWars */
+  export interface ISkyWars {
+    /** Полная статистика */
+    global: ISkyWarsGlobal;
+    /** Сезонная статистика */
+    season: ISkyWarsSeason;
+  }
+
+  /** Полная статистика по SkyWars */
+  export interface ISkyWarsGlobal {
+    /** Побед */
+    wins: number;
+    /** Игр сыграно */
+    games: number;
+    /** Убийств */
+    kills: number;
+    /** Смертей */
+    deaths: number;
+    /** Выстрелов из лука */
     arrowsFired: number;
+    /** Сломано блоков */
     blocksBroken: number;
+    /** Поставлено блоков */
     blocksPlaced: number;
-  };
-}
+    /** Текущая серия побед */
+    currentWinStreak: number;
+    /** Максимально длинная серия побед */
+    winStreak: number;
+  }
 
-// Arcade
+  /** Сезонная статистика по SkyWars */
+  export interface ISkyWarsSeason {
+    /** Статистика за текущий месяц */
+    monthly: Omit<ISkyWarsGlobal, "currentWinStreak" | "winStreak">;
+  }
 
-export interface IArcade {
-  global: IArcadeGlobal;
-  season: IArcadeSeason;
-}
+  /** Статистика для Arcade */
+  export interface IArcade {
+    /** Полная статистика */
+    global: IArcadeGlobal;
+    /** Сезонная статистика */
+    season: IArcadeSeason;
+  }
 
-export interface IArcadeGlobal {
-  games: number;
-  wins: number;
-  kills: number;
-  deaths: number;
-}
-
-export interface IArcadeSeason {
-  monthly: {
+  /** Полная статистика для Arcade */
+  export interface IArcadeGlobal {
+    /** Игр сыграно */
     games: number;
+    /** Побед */
     wins: number;
+    /** Убийств */
     kills: number;
+    /** Смертей */
     deaths: number;
-  };
+  }
+
+  /** Сезонная статистика для Arcade */
+  export interface IArcadeSeason {
+    /** Статистика за текущий месяцы */
+    monthly: IArcadeGlobal;
+  }
+
+  /** Статистика для The Bridge */
+  export interface IBridge {
+    /** Полная статистика */
+    global: IBridgeGlobal;
+  }
+
+  /** Полная статистика для The Bridge */
+  export interface IBridgeGlobal {
+    /** Игр сыграно */
+    games: number;
+    /** Побед */
+    wins: number;
+    /** Убийств */
+    kills: number;
+    /** Смертей */
+    deaths: number;
+    /** Набрано очков */
+    points: number;
+  }
+
+  /** Статистика для JumpLeague */
+  export interface IJumpLeague {
+    /** Полная статистика */
+    global: IJumpLeagueGlobal;
+  }
+
+  /** Полная статистика для JumpLeague */
+  export interface IJumpLeagueGlobal {
+    /** Игр сыграно */
+    games: number;
+    /** Побед */
+    wins: number;
+    /** Убийств */
+    kills: number;
+    /** Смертей */
+    deaths: number;
+    /** Чекпоинтов */
+    checkpoints: number;
+  }
+
+  /** Статистика для Murder Mystery */
+  export interface IMurder {
+    /** Полная статистика */
+    global: IMurderGlobal;
+  }
+  /** Полная статистика для Murder Mystery */
+  export interface IMurderGlobal {
+    /** Игр сыграно */
+    games: number;
+    /** Всего побед */
+    total_wins: number;
+    /** Побед за невиновного */
+    wins_as_innocent: number;
+    /** Побед за маньяка */
+    wins_as_maniac: number;
+    /** Побед за детектива */
+    wins_as_detective: number;
+    /** Убийств */
+    kills: number;
+  }
+
+  /** Статистика для Paintball */
+  export interface IPaintball {
+    /** Полная статистика */
+    global: IPaintballGlobal;
+  }
+
+  /** Полная статистика для Paintball */
+  export interface IPaintballGlobal {
+    /** Игр сыграно */
+    games: number;
+    /** Побед */
+    wins: number;
+    /** Убийств */
+    kills: number;
+    /** Смертей */
+    deaths: number;
+  }
+
+  /** Статистика для Sheep Wars */
+  export interface ISheep {
+    /** Полная статистика */
+    global: ISheepGlobal;
+  }
+
+  /** Полная статистика для Sheep Wars */
+  export interface ISheepGlobal {
+    /** Игр сыграно */
+    games: number;
+    /** Побед */
+    wins: number;
+    /** Убийств */
+    kills: number;
+    /** Смертей */
+    deaths: number;
+  }
+
+  /** Статистика для TurfWars */
+  export interface ITurfWars {
+    /** Полная статистика */
+    global: ITurfWarsGlobal;
+  }
+
+  /** Полная статистика для TurfWars */
+  export interface ITurfWarsGlobal {
+    /** Игр сыграно */
+    games: number;
+    /** Побед */
+    wins: number;
+    /** Убийств */
+    kills: number;
+    /** Смертей */
+    deaths: number;
+  }
+
+  /** Статистика для Spleef
+   *
+   * Этой мини-игры больше не существует
+   */
+  export interface ISpleef {
+    /** Полная статистика */
+    global: ISpleefGlobal;
+  }
+
+  /** Полная статистика для Spleef */
+  export interface ISpleefGlobal {
+    /** Игр сыграно */
+    games: number;
+    /** Побед */
+    wins: number;
+    /** Убийств */
+    kills: number;
+    /** Смертей */
+    deaths: number;
+    /** Уничтожено блоков */
+    broken_blocks: number;
+  }
+
+  /** Статистика для TNT Tag */
+  export interface ITntTag {
+    /** Полная статистика */
+    global: ITntTagGlobal;
+  }
+
+  /** Полная статистика для TNT Tag */
+  export interface ITntTagGlobal {
+    /** Игр сыграно */
+    games: number;
+    /** Побед */
+    wins: number;
+    /** Убийств */
+    kills: number;
+  }
+
+  /** Статистика для TNT Run */
+  export interface ITntRun {
+    /** Полная статистика */
+    global: ITntRunGlobal;
+  }
+
+  /** Полная статистика для TNT Run */
+  export interface ITntRunGlobal {
+    /** Игр сыграно */
+    games: number;
+    /** Побед */
+    wins: number;
+    /** Уничтожено блоков */
+    broken_blocks: number;
+  }
+
+  /** Статистика для LuckyWars */
+  export interface ILuckyWars {
+    /** Полная статистика */
+    global: ILuckyWarsGlobal;
+  }
+
+  /** Полная статистика для LuckyWars */
+  export interface ILuckyWarsGlobal {
+    /** Игр сыграно */
+    games: number;
+    /** Побед */
+    wins: number;
+    /** Убийств */
+    kills: number;
+    /** Смертей */
+    deaths: number;
+    /** Сломано лаки блоков */
+    lucky_blocks: number;
+  }
+
+  /** Модель для `/user/:id/stats` */
+  export interface IUserStatsGroup {
+    /** Annihilation */
+    ANN: IAnnihilation;
+    /** BuildBattle */
+    BB: IBuildBattle;
+    /** BlockParty */
+    BP: IBlockParty;
+    /** BedWars */
+    BW: IBedWars;
+    /** ClashPoint */
+    CP: IClashPoint;
+    /** DeathRun */
+    DR: IDeathRun;
+    /** Duels */
+    DUELS: IDuels;
+    /** GunGame */
+    GG: IGunGame;
+    /** HungerGames */
+    HG: IHungerGames;
+    /** KitPVP */
+    KPVP: IKitPvp;
+    /** MobWars */
+    MW: IMobWars;
+    /** Prison */
+    PRISON: IPrison;
+    /** SkyWars */
+    SW: ISkyWars;
+    /** Arcade */
+    ARC: IArcade;
+    /** The Bridge */
+    BRIDGE: IBridge;
+    /** JumpLeague */
+    JUMPLEAGUE: IJumpLeague;
+    /** Murder Mystery */
+    MURDER: IMurder;
+    /** Paintball */
+    PAINTBALL: IPaintball;
+    /** SheepWars */
+    SHEEP: ISheep;
+    /** TurfWars */
+    TURFWARS: ITurfWars;
+    /** Spleef */
+    SPLEEF: ISpleef;
+    /** TNT Tag */
+    TNTTAG: ITntTag;
+    /** TNT Run */
+    TNTRUN: ITntRun;
+    /** LuckyWars */
+    LUCKYWARS: ILuckyWars;
+  }
 }
 
-// The Bridge
-
-export interface IBridge {
-  global: IBridgeGlobal;
-}
-
-export interface IBridgeGlobal {
-  games: number;
-  wins: number;
-  kills: number;
-  deaths: number;
-  points: number;
-}
-
-// Jump League
-
-export interface IJumpLeague {
-  global: IJumpLeagueGlobal;
-}
-
-export interface IJumpLeagueGlobal {
-  games: number;
-  wins: number;
-  kills: number;
-  deaths: number;
-  checkpoints: number;
-}
-
-// Murder Mystery
-
-export interface IMurder {
-  global: IMurderGlobal;
-}
-
-export interface IMurderGlobal {
-  games: number;
-  total_wins: number;
-  wins_as_innocent: number;
-  wins_as_maniac: number;
-  wins_as_detective: number;
-  kills: number;
-}
-
-// Paintball
-
-export interface IPaintball {
-  global: IPaintballGlobal;
-}
-
-export interface IPaintballGlobal {
-  games: number;
-  wins: number;
-  kills: number;
-  deaths: number;
-}
-
-// Sheep Wars
-
-export interface ISheep {
-  global: ISheepGlobal;
-}
-
-export interface ISheepGlobal {
-  games: number;
-  wins: number;
-  kills: number;
-  deaths: number;
-}
-
-// Turf Wars
-
-export interface ITurfWars {
-  global: ITurfWarsGlobal;
-}
-
-export interface ITurfWarsGlobal {
-  games: number;
-  wins: number;
-  kills: number;
-  deaths: number;
-}
-
-// Spleef
-
-export interface ISpleef {
-  global: ISpleefGlobal;
-}
-
-export interface ISpleefGlobal {
-  games: number;
-  wins: number;
-  kills: number;
-  deaths: number;
-  broken_blocks: number;
-}
-
-// TNT TAG
-
-export interface ITntTag {
-  global: ITntTagGlobal;
-}
-
-export interface ITntTagGlobal {
-  games: number;
-  wins: number;
-  kills: number;
-}
-
-// TNT RUN
-
-export interface ITntRun {
-  global: ITntRunGlobal;
-}
-
-export interface ITntRunGlobal {
-  games: number;
-  wins: number;
-  broken_blocks: number;
-}
-
-// Lucky Wars
-
-export interface ILuckyWars {
-  global: ILuckyWarsGlobal;
-}
-
-export interface ILuckyWarsGlobal {
-  games: number;
-  wins: number;
-  kills: number;
-  deaths: number;
-  lucky_blocks: number;
-}
-
-// Сгруппированная стата по модели из API
-
-export interface IUserStatsGroup {
-  ANN: IAnnihilation;
-  BB: IBuildBattle;
-  BP: IBlockParty;
-  BW: IBedWars;
-  CP: IClashPoint;
-  DR: IDeathRun;
-  DUELS: IDuels;
-  GG: IGunGame;
-  HG: IHungerGames;
-  KPVP: IKitPvp;
-  MW: IMobWars;
-  PRISON: IPrison;
-  SW: ISkyWars;
-  ARC: IArcade;
-  BRIDGE: IBridge;
-  JUMPLEAGUE: IJumpLeague;
-  MURDER: IMurder;
-  PAINTBALL: IPaintball;
-  SHEEP: ISheep;
-  TURFWARS: ITurfWars;
-  SPLEEF: ISpleef;
-  TNTTAG: ITntTag;
-  TNTRUN: ITntRun;
-  LUCKYWARS: ILuckyWars;
-}
+export = Stats;

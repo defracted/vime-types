@@ -1,59 +1,74 @@
-import { IUser, IUserSession } from "./User";
-
 /****************************************
  ****         MIT License            ****
  ****                                ****
  **** Copyright (c) 2020 runic-tears ****
  ****************************************/
 
-// Main
+import { IUser, IUserSession } from "./User";
 
-export interface IOnline {
-  total: number;
-  separated: {
-    ann: number;
-    bb: number;
-    bp: number;
-    bw: number;
-    cp: number;
-    dr: number;
-    duels: number;
-    gg: number;
-    hg: number;
-    kpvp: number;
-    lobby: number;
-    mw: number;
-    prison: number;
-    sw: number;
-    murder: number;
-    bridge: number;
-    jumpleague: number;
-    paintball: number;
-    turfwars: number;
-    sheep: number;
-    spleef: number;
-    tntrun: number;
-    tnttag: number;
-    luckywars: number;
-  };
+declare namespace Online {
+  /** Типы данных для `/online` */
+  export interface IOnline {
+    /** Общее число игроков в онлайне */
+    total: number;
+    /** Число онлайна по мини-играм */
+    separated: {
+      ann: number;
+      bb: number;
+      bp: number;
+      bw: number;
+      cp: number;
+      dr: number;
+      duels: number;
+      gg: number;
+      hg: number;
+      kpvp: number;
+      lobby: number;
+      mw: number;
+      prison: number;
+      sw: number;
+      murder: number;
+      bridge: number;
+      jumpleague: number;
+      paintball: number;
+      turfwars: number;
+      sheep: number;
+      spleef: number;
+      tntrun: number;
+      tnttag: number;
+      luckywars: number;
+    };
+  }
+
+  /** Модель информации о модераторе в списке онлайн модераторов */
+  export interface IOnlineModer extends IUser {
+    /** Объект текущей сессии пользователя */
+    online: IUserSession;
+  }
+
+  /** Модель для `/online/staff` */
+  export type IOnlineStaff = IOnlineModer[];
+
+  /** Модель данных о стримах  */
+  export interface IStreamData {
+    /** Название стрима */
+    title: string;
+    /** Ник ютубера, который добавил (ведёт) стрим */
+    owner: string;
+    /** Количество зрителей на стриме */
+    viewers: number;
+    /** Ссылка на стрим */
+    url: string;
+    /** Продолжительность стрима */
+    duration: number;
+    /** Платформа стримера */
+    platform: "YouTube" | "Twitch" | "GoodGame" | any;
+    /** Объект пользователя (стримера) */
+    user: IUser;
+  }
+
+  /** Модель для `/online/streams` */
+  export type IOnlineStreams = IStreamData[];
 }
 
-// Staff
-
-export interface IOnlineModer extends IUser {
-  online: IUserSession;
-}
-
-// Streams
-
-export interface IStreamData {
-  title: string;
-  owner: string;
-  viewers: number;
-  url: string;
-  duration: number;
-  platform: "YouTube" | "Twitch" | "GoodGame" | any;
-  user: IUser;
-}
-
-export type IOnlineStreams = IStreamData[];
+export = Online;
