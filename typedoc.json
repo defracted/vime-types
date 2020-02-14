@@ -1,0 +1,9 @@
+{
+  "inputFiles": ["./models"],
+  "mode": "modules",
+  "out": "doc",
+  "toc": "User",
+  "hideGenerator": true,
+  "gitRevision": "revision",
+  "name": "vime-types"
+}

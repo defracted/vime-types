@@ -1,2 +1,4 @@
 .prettierrc
 jsodc.json
+typedoc.json
+docs/

@@ -1,10 +1,10 @@
 {
   "name": "vime-types",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Библиотека типов данных из VimeWorld API",
-  "main": "index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "typedoc --options typedoc.json"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/runic-tears/vime-types#readme",
   "devDependencies": {
-    "docdash": "^1.2.0",
-    "jsdoc": "^3.6.3"
+    "@microsoft/tsdoc": "^0.12.16",
+    "typedoc": "^0.16.9"
   }
 }
