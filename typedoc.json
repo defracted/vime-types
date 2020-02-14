@@ -1,7 +1,7 @@
 {
   "inputFiles": ["./models"],
   "mode": "modules",
-  "out": "doc",
+  "out": "docs",
   "toc": "User",
   "hideGenerator": true,
   "gitRevision": "revision",
