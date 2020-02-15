@@ -308,7 +308,9 @@ export interface IMobWarsSeason {
 }
 
 /** Возможные блоки для Prison */
-type blocks = any;
+interface blocks {
+  [key: string]: number;
+}
 
 /** Статистика для Prison */
 export interface IPrison {
