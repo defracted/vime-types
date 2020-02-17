@@ -1,6 +1,6 @@
 {
   "name": "vime-types",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Библиотека типов данных из VimeWorld API",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

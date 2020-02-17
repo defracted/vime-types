@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IKitPvpSeason | vime-types</title>
+	<title>IError | vime-types</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_stats_.html">&quot;Stats&quot;</a>
+					<a href="../modules/_errors_.html">&quot;Errors&quot;</a>
 				</li>
 				<li>
-					<a href="_stats_.ikitpvpseason.html">IKitPvpSeason</a>
+					<a href="_errors_.ierror.html">IError</a>
 				</li>
 			</ul>
-			<h1>Interface IKitPvpSeason</h1>
+			<h1>Interface IError</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +72,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Сезонная статистика для KitPVP</p>
+						<p>Тип ошибок, возвращаемых из API</p>
 					</div>
 				</div>
 			</section>
@@ -80,7 +80,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">IKitPvpSeason</span>
+						<span class="target">IError</span>
 					</li>
 				</ul>
 			</section>
@@ -91,7 +91,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_stats_.ikitpvpseason.html#monthly" class="tsd-kind-icon">monthly</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_errors_.ierror.html#error" class="tsd-kind-icon">error</a></li>
 							</ul>
 						</section>
 					</div>
@@ -100,18 +100,27 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="monthly" class="tsd-anchor"></a>
-					<h3>monthly</h3>
-					<div class="tsd-signature tsd-kind-icon">monthly<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="_stats_.ikitpvpglobal.html" class="tsd-signature-type">IKitPvpGlobal</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">"points"</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="error" class="tsd-anchor"></a>
+					<h3>error</h3>
+					<div class="tsd-signature tsd-kind-icon">error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>comment<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>error_code<span class="tsd-signature-symbol">: </span><a href="../modules/_errors_.html#errorcodes" class="tsd-signature-type">ErrorCodes</a><span class="tsd-signature-symbol">; </span>error_msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/runic-tears/vime-types/blob/revision/models/Stats.ts#L279">Stats.ts:279</a></li>
+							<li>Defined in Errors.ts:23</li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Статистика за текущий месяц</p>
-						</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> comment<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>error_<wbr>code<span class="tsd-signature-symbol">: </span><a href="../modules/_errors_.html#errorcodes" class="tsd-signature-type">ErrorCodes</a></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>error_<wbr>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
 					</div>
 				</section>
 			</section>
@@ -122,7 +131,7 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="../modules/_errors_.html">&quot;<wbr>Errors&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -137,7 +146,7 @@
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_online_.html">&quot;<wbr>Online&quot;</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_stats_.html">&quot;<wbr>Stats&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -147,18 +156,6 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_stats_.ikitpvpseason.html" class="tsd-kind-icon">IKit<wbr>Pvp<wbr>Season</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_stats_.ikitpvpseason.html#monthly" class="tsd-kind-icon">monthly</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="after-current">
 				</ul>
 			</nav>
 		</div>

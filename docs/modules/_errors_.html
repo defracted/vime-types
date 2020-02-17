@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IKitPvpSeason | vime-types</title>
+	<title>&quot;Errors&quot; | vime-types</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,62 +56,58 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_stats_.html">&quot;Stats&quot;</a>
-				</li>
-				<li>
-					<a href="_stats_.ikitpvpseason.html">IKitPvpSeason</a>
+					<a href="_errors_.html">&quot;Errors&quot;</a>
 				</li>
 			</ul>
-			<h1>Interface IKitPvpSeason</h1>
+			<h1>External module &quot;Errors&quot;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Сезонная статистика для KitPVP</p>
-					</div>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-hierarchy">
-				<h3>Hierarchy</h3>
-				<ul class="tsd-hierarchy">
-					<li>
-						<span class="target">IKitPvpSeason</span>
-					</li>
-				</ul>
-			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Properties</h3>
+							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_stats_.ikitpvpseason.html#monthly" class="tsd-kind-icon">monthly</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_errors_.ierror.html" class="tsd-kind-icon">IError</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_errors_.html#errorcodes" class="tsd-kind-icon">Error<wbr>Codes</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="monthly" class="tsd-anchor"></a>
-					<h3>monthly</h3>
-					<div class="tsd-signature tsd-kind-icon">monthly<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="_stats_.ikitpvpglobal.html" class="tsd-signature-type">IKitPvpGlobal</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">"points"</span><span class="tsd-signature-symbol">&gt;</span></div>
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
+					<a name="errorcodes" class="tsd-anchor"></a>
+					<h3>Error<wbr>Codes</h3>
+					<div class="tsd-signature tsd-kind-icon">Error<wbr>Codes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">-3</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">-2</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">-1</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">1</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">2</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">3</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">4</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">10</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/runic-tears/vime-types/blob/revision/models/Stats.ts#L279">Stats.ts:279</a></li>
+							<li>Defined in Errors.ts:19</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Статистика за текущий месяц</p>
+							<p>Коды ошибок</p>
 						</div>
+						<p><code>-3</code> - Неизвестная ошибка в работе API, при её возникновении нужно сообщить куда-нибудь.</p>
+						<p><code>-2</code> - Внутренняя ошибка сервера. О ней тоже нужно куда-нибудь сообщить.</p>
+						<p><code>-1</code> - По адресу, который вы указали, не нашлось ни одного метода.</p>
+						<p><code>1</code> - Указан неправильный токен. Вы можете получить его командой <code>/api dev</code> на сервере MiniGames.</p>
+						<p><code>2</code> - Исчерпано количество запросов в минуту.</p>
+						<p><code>3</code> - Один из заданных параметров не передан или указан неправильно. Чтобы решить ошибку, почитайте описание метода и его параметров.</p>
+						<p><code>4</code> - Метод отключен или не работает по каким-то причинам.</p>
+						<p><code>10+</code> - Ошибки с кодом 10+ указывают на то что запрошенный “ресурс” не существует, например: игрок, гильдия, матч.</p>
 					</div>
 				</section>
 			</section>
@@ -122,43 +118,31 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_errors_.html">&quot;<wbr>Errors&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_guild_.html">&quot;<wbr>Guild&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_leaderboard_.html">&quot;<wbr>Leaderboard&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_match_.html">&quot;<wbr>Match&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_online_.html">&quot;<wbr>Online&quot;</a>
-					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="../modules/_stats_.html">&quot;<wbr>Stats&quot;</a>
+						<a href="_errors_.html">&quot;<wbr>Errors&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_user_.html">&quot;<wbr>User&quot;</a>
+						<a href="_guild_.html">&quot;<wbr>Guild&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_leaderboard_.html">&quot;<wbr>Leaderboard&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_match_.html">&quot;<wbr>Match&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_online_.html">&quot;<wbr>Online&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_stats_.html">&quot;<wbr>Stats&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_user_.html">&quot;<wbr>User&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_stats_.ikitpvpseason.html" class="tsd-kind-icon">IKit<wbr>Pvp<wbr>Season</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_stats_.ikitpvpseason.html#monthly" class="tsd-kind-icon">monthly</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="after-current">
 				</ul>
 			</nav>
 		</div>
